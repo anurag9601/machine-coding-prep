@@ -1,0 +1,7 @@
+.appContainer{
+    min-height: 100dvh;
+    min-width: 100dvw;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+}
