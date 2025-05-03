@@ -5,6 +5,7 @@ import BackTrack from "./BackTrack/BackTrack";
 import VirtualScroll from "./VirtualScroll/VirtualScroll";
 import MemoryGame from "./MemoryGame/MemoryGame";
 import NestedComment from "./NestedComments/NestedComment";
+import TrafficLight from "./TrafficLight/TrafficLight";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         />
         <Route path="/memory-game" element={<MemoryGame />} />
         <Route path="/nested-comment" element={<NestedComment />} />
+        <Route path="/traffic-light" element={<TrafficLight />} />
       </Routes>
     </div>
   );

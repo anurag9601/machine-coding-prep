@@ -22,7 +22,7 @@ const Comment: React.FC<CommentProps> = ({
 
   const replyRef = React.useRef<HTMLInputElement | null>(null);
 
-  const handleSendReply = (e: React.FormEvent) => {
+  const handleSendReply = React.useCallback((e: React.FormEvent) => {
     e.preventDefault();
     if (!replyRef.current) return;
 
@@ -48,15 +48,17 @@ const Comment: React.FC<CommentProps> = ({
 
     replyRef.current.value = "";
     setReplyBoxVisible(false);
-  };
+  }, []);
 
-  const handleDelete = () => {
+  const handleDelete = React.useCallback(() => {
     setComments((prev) => {
       let updatedComments = { ...prev };
 
       updatedComments[comment.parentId].childrens = updatedComments[
         comment.parentId
-      ].childrens.filter((child) => child != comment.id);
+      ].childrens.filter((child) => {
+        return child != comment.id;
+      });
 
       let queue = [...updatedComments[comment.id].childrens];
 
@@ -72,13 +74,13 @@ const Comment: React.FC<CommentProps> = ({
 
       return updatedComments;
     });
-  };
+  }, []);
 
   React.useEffect(() => {
     if (replyRef.current) {
       replyRef.current.focus();
     }
-  }, [replyBoxVisible]);
+  }, [replyBoxVisible === true]);
 
   return (
     <div className={styles.commentContainer}>
@@ -98,7 +100,7 @@ const Comment: React.FC<CommentProps> = ({
       </div>
       {replyBoxVisible === true && (
         <form className={styles.replyBox} onSubmit={handleSendReply}>
-          <input ref={replyRef}></input>
+          <input ref={replyRef} placeholder="Type your reply here.."></input>
           <button>Send Reply</button>
         </form>
       )}
