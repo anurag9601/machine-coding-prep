@@ -13,10 +13,8 @@ const MemoryGame = () => {
 
   const flipIndex = React.useRef<number[]>([]);
 
-  const flipAllow = React.useRef<boolean>(true);
-
   function handleClickOnCard(index: number) {
-    if (!flipAllow.current && flipIndex.current.length === 2) return;
+    if (flipIndex.current.length === 2) return;
     setData((prev) => {
       const updatedData = [...prev];
       updatedData[index].turned = true;
@@ -27,7 +25,6 @@ const MemoryGame = () => {
 
   React.useEffect(() => {
     if (flipIndex.current.length === 2) {
-      flipAllow.current = false;
       const flipIndexes = flipIndex.current;
       const timeOut = setTimeout(() => {
         if (data[flipIndexes[0]].imgURL !== data[flipIndexes[1]].imgURL) {
@@ -41,7 +38,6 @@ const MemoryGame = () => {
           alert("It's a match 👍");
         }
         clearTimeout(timeOut);
-        flipAllow.current = true;
         flipIndex.current = [];
       }, 2 * 1000);
     }
@@ -53,24 +49,22 @@ const MemoryGame = () => {
       <div className={styles.boxContainer}>
         {data.map((e, index) => {
           return (
-            <>
+            <div key={index}>
               {e.turned == true ? (
                 <img
                   src={e.imgURL}
                   alt="img"
                   height={50}
                   width={50}
-                  key={index}
                   className={`${e.turned === true && styles.flipAnimation}`}
                 />
               ) : (
                 <div
                   className={styles.blankBox}
                   onClick={() => handleClickOnCard(index)}
-                  key={index}
                 ></div>
               )}
-            </>
+            </div>
           );
         })}
       </div>

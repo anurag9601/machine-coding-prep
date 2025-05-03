@@ -4,6 +4,7 @@ import Scroll from "./InfiniteScroll/Scroll/Scroll";
 import BackTrack from "./BackTrack/BackTrack";
 import VirtualScroll from "./VirtualScroll/VirtualScroll";
 import MemoryGame from "./MemoryGame/MemoryGame";
+import NestedComment from "./NestedComments/NestedComment";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           element={<VirtualScroll height={500} width={300} />}
         />
         <Route path="/memory-game" element={<MemoryGame />} />
+        <Route path="/nested-comment" element={<NestedComment />} />
       </Routes>
     </div>
   );

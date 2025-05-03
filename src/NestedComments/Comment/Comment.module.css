@@ -1,0 +1,56 @@
+.commentContainer{
+    border-left: 1px solid #fff;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.comment{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.reply{
+    color: rgb(72, 143, 205);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.delete{
+    color: rgb(184, 69, 69);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.replyBox{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    gap: 10px;
+}
+
+.replyBox input{
+    height: 40px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #fff;
+    resize: none;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+}
+
+.replyBox button{
+    height: 30px;
+    width: 120px;
+    background: rgb(72, 143, 205);
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.replyBox button:hover{
+    opacity: .8;
+}
