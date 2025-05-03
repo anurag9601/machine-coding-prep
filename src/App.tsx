@@ -3,6 +3,7 @@ import styles from "./App.module.css";
 import Scroll from "./InfiniteScroll/Scroll/Scroll";
 import BackTrack from "./BackTrack/BackTrack";
 import VirtualScroll from "./VirtualScroll/VirtualScroll";
+import MemoryGame from "./MemoryGame/MemoryGame";
 
 function App() {
   return (
@@ -10,7 +11,11 @@ function App() {
       <Routes>
         <Route path="/infinite-scroll" element={<Scroll />} />
         <Route path="/backtrack" element={<BackTrack />} />
-        <Route path="/virtual-scroll" element={<VirtualScroll height={500} width={300}/>} />
+        <Route
+          path="/virtual-scroll"
+          element={<VirtualScroll height={500} width={300} />}
+        />
+        <Route path="/memory-game" element={<MemoryGame />} />
       </Routes>
     </div>
   );
