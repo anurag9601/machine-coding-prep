@@ -6,6 +6,8 @@ import VirtualScroll from "./VirtualScroll/VirtualScroll";
 import MemoryGame from "./MemoryGame/MemoryGame";
 import NestedComment from "./NestedComments/NestedComment";
 import TrafficLight from "./TrafficLight/TrafficLight";
+import ScrollProgress from "./ScrollProgress/ScrollProgress";
+import DragDrop from "./DragDrop/DragDrop";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/memory-game" element={<MemoryGame />} />
         <Route path="/nested-comment" element={<NestedComment />} />
         <Route path="/traffic-light" element={<TrafficLight />} />
+        <Route path="/scroll-progress" element={<ScrollProgress />} />
+        <Route path="/drag-drop" element={<DragDrop />} />
       </Routes>
     </div>
   );
