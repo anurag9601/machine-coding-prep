@@ -8,6 +8,7 @@ import NestedComment from "./NestedComments/NestedComment";
 import TrafficLight from "./TrafficLight/TrafficLight";
 import ScrollProgress from "./ScrollProgress/ScrollProgress";
 import DragDrop from "./DragDrop/DragDrop";
+import UseMemo from "./UseMemo/UseMemo";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/traffic-light" element={<TrafficLight />} />
         <Route path="/scroll-progress" element={<ScrollProgress />} />
         <Route path="/drag-drop" element={<DragDrop />} />
+        <Route path="/usememo" element={<UseMemo />} />
       </Routes>
     </div>
   );
