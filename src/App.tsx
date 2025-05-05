@@ -9,6 +9,7 @@ import TrafficLight from "./TrafficLight/TrafficLight";
 import ScrollProgress from "./ScrollProgress/ScrollProgress";
 import DragDrop from "./DragDrop/DragDrop";
 import UseMemo from "./UseMemo/UseMemo";
+import ShowModel from "./ShowModel/ShowModel";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/scroll-progress" element={<ScrollProgress />} />
         <Route path="/drag-drop" element={<DragDrop />} />
         <Route path="/usememo" element={<UseMemo />} />
+        <Route path="/show-model" element={<ShowModel />} />
       </Routes>
     </div>
   );
