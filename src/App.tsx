@@ -10,6 +10,8 @@ import ScrollProgress from "./ScrollProgress/ScrollProgress";
 import DragDrop from "./DragDrop/DragDrop";
 import UseMemo from "./UseMemo/UseMemo";
 import ShowModel from "./ShowModel/ShowModel";
+import CryptoConverter from "./CryptoConverter/CryptoConverter";
+import CheckBoxes from "./ChecKBoxes/CheckBoxes";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path="/drag-drop" element={<DragDrop />} />
         <Route path="/usememo" element={<UseMemo />} />
         <Route path="/show-model" element={<ShowModel />} />
+        <Route path="/crypto-converter" element={<CryptoConverter />} />
+        <Route path="/checkbox" element={<CheckBoxes />} />
       </Routes>
     </div>
   );

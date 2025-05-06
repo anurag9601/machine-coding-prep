@@ -1,0 +1,130 @@
+{
+    "0": {
+        "name": "root",
+        "parent": null,
+        "id": 0,
+        "childrens": [1, 8, 12],
+        "status": "unchecked",
+        "element": null
+    },
+    "1": {
+        "name": "work project",
+        "parent": 0,
+        "id": 1,
+        "childrens": [2, 3, 4],
+        "status": "unchecked",
+        "element": null
+    },
+    "2": {
+        "name": "Project X",
+        "parent": 1,
+        "id": 2,
+        "childrens": [5, 6],
+        "status": "unchecked",
+        "element": null
+    },
+    "3": {
+        "name": "Project Y",
+        "parent": 1,
+        "id": 3,
+        "childrens": [],
+        "status": "unchecked",
+        "element": null
+    },
+    "4": {
+        "name": "Project Else",
+        "parent": 1,
+        "id": 4,
+        "childrens": [7],
+        "status": "unchecked",
+        "element": null
+    },
+    "5": {
+        "name": "Frontend Module",
+        "parent": 2,
+        "id": 5,
+        "childrens": [],
+        "status": "unchecked",
+        "element": null
+    },
+    "6": {
+        "name": "Backend Module",
+        "parent": 2,
+        "id": 6,
+        "childrens": [],
+        "status": "unchecked",
+        "element": null
+    },
+    "7": {
+        "name": "Design Prototype",
+        "parent": 4,
+        "id": 7,
+        "childrens": [],
+        "status": "unchecked",
+        "element": null
+    },
+    "8": {
+        "name": "Trips",
+        "parent": 0,
+        "id": 8,
+        "childrens": [9, 10],
+        "status": "unchecked",
+        "element": null
+    },
+    "9": {
+        "name": "Goa Trip",
+        "parent": 8,
+        "id": 9,
+        "childrens": [11],
+        "status": "unchecked",
+        "element": null
+    },
+    "10": {
+        "name": "Manali Adventure",
+        "parent": 8,
+        "id": 10,
+        "childrens": [],
+        "status": "unchecked",
+        "element": null
+    },
+    "11": {
+        "name": "Itinerary Planning",
+        "parent": 9,
+        "id": 11,
+        "childrens": [],
+        "status": "unchecked",
+        "element": null
+    },
+    "12": {
+        "name": "Investments",
+        "parent": 0,
+        "id": 12,
+        "childrens": [13, 14],
+        "status": "unchecked",
+        "element": null
+    },
+    "13": {
+        "name": "Stock Market",
+        "parent": 12,
+        "id": 13,
+        "childrens": [],
+        "status": "unchecked",
+        "element": null
+    },
+    "14": {
+        "name": "Crypto",
+        "parent": 12,
+        "id": 14,
+        "childrens": [15],
+        "status": "unchecked",
+        "element": null
+    },
+    "15": {
+        "name": "ETH Portfolio",
+        "parent": 14,
+        "id": 15,
+        "childrens": [],
+        "status": "unchecked",
+        "element": null
+    }
+}
