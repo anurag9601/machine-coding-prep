@@ -2,39 +2,30 @@ import React from "react";
 import styles from "./ScrollProgress.module.css";
 
 const ScrollProgress = () => {
-  const pageContainerRef = React.useRef<HTMLDivElement | null>(null);
+  const [scrollPercentage, setScrollPrecentage] = React.useState<number>(0);
+  function handleContainerOnScroll(e: React.UIEvent<HTMLDivElement>) {
+    const scrollTop = e.target.scrollTop;
+    const containerHeight = e.target.scrollHeight;
+    const screenHeight = e.target.clientHeight;
+    const totalScrollHeight = containerHeight - screenHeight;
 
-  const handleContainerOnScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    const container = pageContainerRef.current;
+    const percentageScroll = Math.floor((scrollTop / totalScrollHeight) * 100);
+    setScrollPrecentage(percentageScroll);
+  }
 
-    if (container) {
-      const clientHeight = container.clientHeight;
-      const scrollHeight = container.scrollHeight;
-      const scrollTop = container.scrollTop;
+  console.log(scrollPercentage);
 
-      const progressHeight = Math.floor(
-        (scrollTop / (scrollHeight - clientHeight)) * 100
-      );
-
-      console.log("progressHeight", progressHeight);
-    }
-  };
   return (
-    <div
-      className={styles.pageContainer}
-      ref={pageContainerRef}
-      onScroll={handleContainerOnScroll}
-    >
-      <div className={styles.page1}>
-        <h1>Page No 1</h1>
+    <div className={styles.scrollContainer} onScroll={handleContainerOnScroll}>
+      <div className={styles.scrollNavigator}>
+        <div
+          className={styles.navigator}
+          style={{ width: `${scrollPercentage}%` }}
+        ></div>
       </div>
-      <div className={styles.page2}>
-        <h1>Page No 2</h1>
-      </div>
-      <div className={styles.page3}>
-        <h1>Page No 3</h1>
-      </div>
-      <div className={styles.progressBox}></div>
+      <div className={styles.page1}></div>
+      <div className={styles.page2}></div>
+      <div className={styles.page3}></div>
     </div>
   );
 };

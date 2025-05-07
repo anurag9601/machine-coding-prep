@@ -1,34 +1,24 @@
-.pageContainer{
+.scrollContainer{
     height: 100dvh;
     width: 100%;
-    overflow: auto;
+    overflow: scroll;
 }
 
-.page1{
+.page1, .page2, .page3{
     min-height: 100dvh;
+    width: 100%;
+}
+
+.scrollNavigator{
+    position: fixed;
+    top: 0;
     width: 100%;
     background-color: red;
-    color: #000;
-}
-.page2{
-    min-height: 100dvh;
-    width: 100%;
-    background-color: yellow;
-    color: #000;
-}
-.page3{
-    min-height: 100dvh;
-    width: 100%;
-    background-color: greenyellow;
-    color: #000;
+    height: 10px;
 }
 
-.progressBox{
-    position: fixed;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    bottom: 40px;
-    right: 40px;
-    border: 10% solid #000;
+.navigator{
+    height: 10px;
+    background-color: gold;
+    transition-duration: .3s;
 }

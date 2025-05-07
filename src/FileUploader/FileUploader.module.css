@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Patrick+Hand+SC&family=Sigmar&family=Winky+Rough:ital,wght@0,300..900;1,300..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+.uploadContainer{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    gap: 10px;
+}
+
+.uploadArea{
+    height: 200px;
+    width: 80%;
+    border: 1px dashed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.uploadArea h2{
+    font-family: "Winky Rough", sans-serif;
+}
+
+.uploadArea h3{
+    font-family: "Winky Sans", sans-serif;
+    text-decoration: underline;
+    transition: .3s;
+}
+
+.uploadArea h3:hover{
+    color: #bde0fe;
+    transition: .3s;
+}
+
+.uploadFiles{
+    padding: 20px;
+    border: 1px solid;
+    width: 80%;
+    height: fit-content;
+    border-radius: 20px;
+}
+
+.uploadFiles h2{
+    font-family: "Winky Rough", sans-serif;
+    font-size: 20px;
+}
+
+.files{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.file{
+    height: 60px;
+    background-color: #212529;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.fileInfo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fileInfo img{
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    object-position: center;
+    object-fit: cover;
+}
+
+.fileTitles{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fileTitles .name{
+    font-family: "Comic Relief", system-ui;
+    font-size: 11px;
+}
+
+.fileTitles .size{
+    font-family: "Comic Relief", system-ui;
+    font-size: 9px;  
+    color: #adb5bd;  
+}
+
+.active{
+    background-color: #95d5b2;
+    border: 2px dashed #52b788;
+}

@@ -12,6 +12,7 @@ import UseMemo from "./UseMemo/UseMemo";
 import ShowModel from "./ShowModel/ShowModel";
 import CryptoConverter from "./CryptoConverter/CryptoConverter";
 import CheckBoxes from "./ChecKBoxes/CheckBoxes";
+import FileUploader from "./FileUploader/FileUploader";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/show-model" element={<ShowModel />} />
         <Route path="/crypto-converter" element={<CryptoConverter />} />
         <Route path="/checkbox" element={<CheckBoxes />} />
+        <Route path="/file-uploader" element={<FileUploader />} />
       </Routes>
     </div>
   );
